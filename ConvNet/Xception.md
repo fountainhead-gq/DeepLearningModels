@@ -31,10 +31,15 @@ Xception作为Inception v3的改进，主要是在Inception v3的基础上引入
 
 从卷积的分组来看：
 - 分1组，即不分组，就是普通的卷积，比如VGG16和ResNet
+
 - 分3组或4组，就是Inception
+
 - 分32组或64组，就是ResNeXt
+
 - 分到极限，每个通道一组，就是Xception  
   Xception就可以完全实现空间上的卷积和通道上的卷积的独立，各个操作之间减少耦合，充分利用计算力，用较小的尺寸达到了很好的效果。
+
+![](images/sepa-conv-xception.jpg)
 
 CNN结构演化图:
 ![](images/cnn-develop.png)
